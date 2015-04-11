@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A12B43419B20C9600CC6235 /* IGLDropDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A12B43119B20C9600CC6235 /* IGLDropDownItem.m */; };
 		3A12B43519B20C9600CC6235 /* IGLDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A12B43319B20C9600CC6235 /* IGLDropDownMenu.m */; };
 		3A29357C19B20673006BAAA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A29357B19B20673006BAAA7 /* Foundation.framework */; };
 		3A29357E19B20673006BAAA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A29357D19B20673006BAAA7 /* CoreGraphics.framework */; };
@@ -22,6 +21,8 @@
 		3A29359F19B20673006BAAA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A29359D19B20673006BAAA7 /* InfoPlist.strings */; };
 		3A2935A119B20673006BAAA7 /* IGLDropDownMenuDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2935A019B20673006BAAA7 /* IGLDropDownMenuDemoTests.m */; };
 		3A2935B319B2094A006BAAA7 /* IGLDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2935B219B2094A006BAAA7 /* IGLDemoViewController.m */; };
+		85E09F571AD9CF5D00243DE7 /* IGLDropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09F561AD9CF5D00243DE7 /* IGLDropDownMenu.swift */; };
+		85E09F591AD9CF6B00243DE7 /* IGLDropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09F581AD9CF6B00243DE7 /* IGLDropDownItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A12B43019B20C9600CC6235 /* IGLDropDownItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDropDownItem.h; sourceTree = "<group>"; };
-		3A12B43119B20C9600CC6235 /* IGLDropDownItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownItem.m; sourceTree = "<group>"; };
 		3A12B43219B20C9600CC6235 /* IGLDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDropDownMenu.h; sourceTree = "<group>"; };
 		3A12B43319B20C9600CC6235 /* IGLDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownMenu.m; sourceTree = "<group>"; };
 		3A29357819B20673006BAAA7 /* IGLDropDownMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGLDropDownMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +56,8 @@
 		3A2935A019B20673006BAAA7 /* IGLDropDownMenuDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownMenuDemoTests.m; sourceTree = "<group>"; };
 		3A2935B119B2094A006BAAA7 /* IGLDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDemoViewController.h; sourceTree = "<group>"; };
 		3A2935B219B2094A006BAAA7 /* IGLDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDemoViewController.m; sourceTree = "<group>"; };
+		85E09F561AD9CF5D00243DE7 /* IGLDropDownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGLDropDownMenu.swift; sourceTree = "<group>"; };
+		85E09F581AD9CF6B00243DE7 /* IGLDropDownItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGLDropDownItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +87,10 @@
 		3A12B42F19B20C9600CC6235 /* IGLDropDownMenu */ = {
 			isa = PBXGroup;
 			children = (
+				85E09F581AD9CF6B00243DE7 /* IGLDropDownItem.swift */,
 				3A12B43219B20C9600CC6235 /* IGLDropDownMenu.h */,
 				3A12B43319B20C9600CC6235 /* IGLDropDownMenu.m */,
-				3A12B43019B20C9600CC6235 /* IGLDropDownItem.h */,
-				3A12B43119B20C9600CC6235 /* IGLDropDownItem.m */,
+				85E09F561AD9CF5D00243DE7 /* IGLDropDownMenu.swift */,
 			);
 			path = IGLDropDownMenu;
 			sourceTree = SOURCE_ROOT;
@@ -263,10 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A12B43419B20C9600CC6235 /* IGLDropDownItem.m in Sources */,
 				3A29358819B20673006BAAA7 /* main.m in Sources */,
+				85E09F571AD9CF5D00243DE7 /* IGLDropDownMenu.swift in Sources */,
 				3A29358C19B20673006BAAA7 /* IGLAppDelegate.m in Sources */,
 				3A12B43519B20C9600CC6235 /* IGLDropDownMenu.m in Sources */,
+				85E09F591AD9CF6B00243DE7 /* IGLDropDownItem.swift in Sources */,
 				3A2935B319B2094A006BAAA7 /* IGLDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,10 +388,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IGLDropDownMenuDemo/IGLDropDownMenuDemo-Prefix.pch";
 				INFOPLIST_FILE = "IGLDropDownMenuDemo/IGLDropDownMenuDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -399,9 +404,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IGLDropDownMenuDemo/IGLDropDownMenuDemo-Prefix.pch";
 				INFOPLIST_FILE = "IGLDropDownMenuDemo/IGLDropDownMenuDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
