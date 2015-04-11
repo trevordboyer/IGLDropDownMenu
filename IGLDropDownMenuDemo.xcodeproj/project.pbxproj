@@ -13,16 +13,16 @@
 		3A29358019B20673006BAAA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A29357F19B20673006BAAA7 /* UIKit.framework */; };
 		3A29358619B20673006BAAA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A29358419B20673006BAAA7 /* InfoPlist.strings */; };
 		3A29358819B20673006BAAA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A29358719B20673006BAAA7 /* main.m */; };
-		3A29358C19B20673006BAAA7 /* IGLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A29358B19B20673006BAAA7 /* IGLAppDelegate.m */; };
 		3A29358E19B20673006BAAA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A29358D19B20673006BAAA7 /* Images.xcassets */; };
 		3A29359519B20673006BAAA7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A29359419B20673006BAAA7 /* XCTest.framework */; };
 		3A29359619B20673006BAAA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A29357B19B20673006BAAA7 /* Foundation.framework */; };
 		3A29359719B20673006BAAA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A29357F19B20673006BAAA7 /* UIKit.framework */; };
 		3A29359F19B20673006BAAA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A29359D19B20673006BAAA7 /* InfoPlist.strings */; };
 		3A2935A119B20673006BAAA7 /* IGLDropDownMenuDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2935A019B20673006BAAA7 /* IGLDropDownMenuDemoTests.m */; };
-		3A2935B319B2094A006BAAA7 /* IGLDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2935B219B2094A006BAAA7 /* IGLDemoViewController.m */; };
 		85E09F571AD9CF5D00243DE7 /* IGLDropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09F561AD9CF5D00243DE7 /* IGLDropDownMenu.swift */; };
 		85E09F591AD9CF6B00243DE7 /* IGLDropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09F581AD9CF6B00243DE7 /* IGLDropDownItem.swift */; };
+		85E09F5B1AD9D45C00243DE7 /* IGLAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09F5A1AD9D45C00243DE7 /* IGLAppDelegate.swift */; };
+		85E09F5D1AD9D5CD00243DE7 /* IGLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09F5C1AD9D5CD00243DE7 /* IGLDemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,18 +46,16 @@
 		3A29358519B20673006BAAA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A29358719B20673006BAAA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A29358919B20673006BAAA7 /* IGLDropDownMenuDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IGLDropDownMenuDemo-Prefix.pch"; sourceTree = "<group>"; };
-		3A29358A19B20673006BAAA7 /* IGLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGLAppDelegate.h; sourceTree = "<group>"; };
-		3A29358B19B20673006BAAA7 /* IGLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGLAppDelegate.m; sourceTree = "<group>"; };
 		3A29358D19B20673006BAAA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3A29359319B20673006BAAA7 /* IGLDropDownMenuDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IGLDropDownMenuDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A29359419B20673006BAAA7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3A29359C19B20673006BAAA7 /* IGLDropDownMenuDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IGLDropDownMenuDemoTests-Info.plist"; sourceTree = "<group>"; };
 		3A29359E19B20673006BAAA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A2935A019B20673006BAAA7 /* IGLDropDownMenuDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownMenuDemoTests.m; sourceTree = "<group>"; };
-		3A2935B119B2094A006BAAA7 /* IGLDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDemoViewController.h; sourceTree = "<group>"; };
-		3A2935B219B2094A006BAAA7 /* IGLDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDemoViewController.m; sourceTree = "<group>"; };
 		85E09F561AD9CF5D00243DE7 /* IGLDropDownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGLDropDownMenu.swift; sourceTree = "<group>"; };
 		85E09F581AD9CF6B00243DE7 /* IGLDropDownItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGLDropDownItem.swift; sourceTree = "<group>"; };
+		85E09F5A1AD9D45C00243DE7 /* IGLAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGLAppDelegate.swift; sourceTree = "<group>"; };
+		85E09F5C1AD9D5CD00243DE7 /* IGLDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGLDemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +126,8 @@
 		3A29358119B20673006BAAA7 /* IGLDropDownMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3A29358A19B20673006BAAA7 /* IGLAppDelegate.h */,
-				3A29358B19B20673006BAAA7 /* IGLAppDelegate.m */,
-				3A2935B119B2094A006BAAA7 /* IGLDemoViewController.h */,
-				3A2935B219B2094A006BAAA7 /* IGLDemoViewController.m */,
+				85E09F5A1AD9D45C00243DE7 /* IGLAppDelegate.swift */,
+				85E09F5C1AD9D5CD00243DE7 /* IGLDemoViewController.swift */,
 				3A12B42F19B20C9600CC6235 /* IGLDropDownMenu */,
 				3A29358D19B20673006BAAA7 /* Images.xcassets */,
 				3A29358219B20673006BAAA7 /* Supporting Files */,
@@ -264,12 +260,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E09F5D1AD9D5CD00243DE7 /* IGLDemoViewController.swift in Sources */,
 				3A29358819B20673006BAAA7 /* main.m in Sources */,
 				85E09F571AD9CF5D00243DE7 /* IGLDropDownMenu.swift in Sources */,
-				3A29358C19B20673006BAAA7 /* IGLAppDelegate.m in Sources */,
+				85E09F5B1AD9D45C00243DE7 /* IGLAppDelegate.swift in Sources */,
 				3A12B43519B20C9600CC6235 /* IGLDropDownMenu.m in Sources */,
 				85E09F591AD9CF6B00243DE7 /* IGLDropDownItem.swift in Sources */,
-				3A2935B319B2094A006BAAA7 /* IGLDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

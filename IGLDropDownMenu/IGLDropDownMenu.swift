@@ -6,4 +6,8 @@
 //  Copyright (c) 2015 Galvin Li. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class IGLDropDownMenu : UIControl {
+    
+}
