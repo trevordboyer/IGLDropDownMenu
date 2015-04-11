@@ -16,7 +16,7 @@ class IGLDropDownItem : UIControl {
     var object: AnyObject?
     var text: NSString?
     
-    let textLabel: UILabel?
+    var textLabel: UILabel?
     
     var paddingLeft: CGFloat?
     
@@ -24,14 +24,17 @@ class IGLDropDownItem : UIControl {
     
     private var iconImageView: UIImageView?
     private var bgView: UIView?
-    private var textLabel: UILabel?
     
-    override init(frame: CGRext) {
+    override init() {
+        super.init()
+    }
+    
+    override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
     }
     
-    init(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
     }
@@ -41,32 +44,32 @@ class IGLDropDownItem : UIControl {
         self.initView()
     }
     
-    func setFrame(frame: CGFrame) {
-        super.setFrame(frame)
-        self.bgView.setFrame(self.bounds)
+    func setFrame(frame: CGRect) {
+        super.frame = frame
+        self.bgView!.frame = self.bounds
         self.updateLayout()
     }
     
     private func initView() {
         
         self.bgView = UIView()
-        self.bgView.userInteractionEnabled = false
-        self.bgView.backgroundColor = UIColor.whiteColor()
-        self.bgView.layer.shadowColor = UIColor.grayColor().CGColor
-        self.bgView.layer.shadowOffset = CGSizeMake(0, 0)
-        self.bgView.layer.shadowOpacity = 0.2
-        self.bgView.layer.shouldRasterize = true
-        self.bgView.setFrame(self.bounds)
-        self.addSubview(self.bgView)
+        self.bgView!.userInteractionEnabled = false
+        self.bgView!.backgroundColor = UIColor.whiteColor()
+        self.bgView!.layer.shadowColor = UIColor.grayColor().CGColor
+        self.bgView!.layer.shadowOffset = CGSizeMake(0, 0)
+        self.bgView!.layer.shadowOpacity = 0.2
+        self.bgView!.layer.shouldRasterize = true
+        self.bgView!.frame = self.bounds
+        self.addSubview(self.bgView!)
         
         self.iconImageView = UIImageView()
-        self.iconImageView.contentMode = .Center
-        self.addSubview(self.iconImageView)
+        self.iconImageView!.contentMode = .Center
+        self.addSubview(self.iconImageView!)
         
         self.textLabel = UILabel()
-        self.textLabel.numberOfLines = 1
-        self.textLabel.textColor = UIColor.grayColor()
-        self.addSubview(self.textLabel)
+        self.textLabel!.numberOfLines = 1
+        self.textLabel!.textColor = UIColor.grayColor()
+        self.addSubview(self.textLabel!)
         
         self.updateLayout()
         
@@ -74,7 +77,7 @@ class IGLDropDownItem : UIControl {
     
     func setIconImage(iconImage: UIImage) {
         self.iconImage = iconImage
-        self.iconImageView.image = self.iconImage
+        self.iconImageView!.image = self.iconImage
         
         self.updateLayout()
     }
@@ -84,12 +87,12 @@ class IGLDropDownItem : UIControl {
         var selfWidth: CGFloat = CGRectGetWidth(self.bounds)
         var selfHeight: CGFloat = CGRectGetHeight(self.bounds)
         
-        self.iconImageView.setFrame(CGRectMake(self.paddingLeft, 0, selfHeight, selfHeight))
+        self.iconImageView!.frame = CGRectMake(self.paddingLeft!, 0, selfHeight, selfHeight)
         
         if (self.iconImage != nil) {
-            self.textLabel.setFrame(CGRectMake(CGRectGetMaxX(self.iconImageView.frame), 0, selfWidth - CGRectGetMaxX(self.iconImageView.frame), selfHeight))
+            self.textLabel!.frame = CGRectMake(CGRectGetMaxX(self.iconImageView!.frame), 0, selfWidth - CGRectGetMaxX(self.iconImageView!.frame), selfHeight)
         } else {
-            self.textLabel.setFrame(CGRectMake(self.paddingLeft, 0, selfWidth, selfHeight))
+            self.textLabel!.frame = CGRectMake(self.paddingLeft!, 0, selfWidth, selfHeight)
         }
         
     }
@@ -105,11 +108,11 @@ class IGLDropDownItem : UIControl {
     }
     
     func setText(text: String) {
-        text = NSString(string: text)
-        self.textLabel.text = self.text
+        self.text = NSString(string: text)
+        self.textLabel!.text = self.text
     }
     
-    override func copyWithZone(zone: NSZone) -> AnyObject? {
+    func copyWithZone(zone: NSZone) -> AnyObject? {
         var itemCopy = IGLDropDownItem()
         
         itemCopy.index = self.index

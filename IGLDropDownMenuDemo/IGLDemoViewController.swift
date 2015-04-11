@@ -13,9 +13,13 @@ class IGLDemoViewController : UIViewController, IGLDropDownMenuDelegate {
     private var dropDownMenu: IGLDropDownMenu?
     private var textLabel: UILabel?
     
-    override init(nibName nibNameOrNil: NSString, bundle nibBundleOrNil: NSBundle) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.view.backgroundColor = UIColor(red:0.89, green:0.89, blue:0.89, alpha:1.0)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
@@ -23,9 +27,9 @@ class IGLDemoViewController : UIViewController, IGLDropDownMenuDelegate {
         // Do any additional setup after loading the view.
         
         var segmentedControl: UISegmentedControl = UISegmentedControl(items: [ "Demo1", "Demo2", "Demo3", "Demo4", "Demo5", "Demo6" ] )
-        segmentedControl.setFrame(CGRectMake(10, 25, 300, 30))
+        segmentedControl.frame = CGRectMake(10, 25, 300, 30)
         segmentedControl.addTarget(self, action: Selector("segmentChanged:"), forControlEvents:.ValueChanged)
-        segmentedControl.setSelectedSegmentIndex(0)
+        segmentedControl.selectedSegmentIndex = 0
         self.view.addSubview(segmentedControl)
         
         var dataArray =  [ [ "image" : "sun.png", "title" : "Sun" ],
@@ -40,17 +44,17 @@ class IGLDemoViewController : UIViewController, IGLDropDownMenuDelegate {
             var dict: NSDictionary = dataArray[i]
             
             var item: IGLDropDownItem = IGLDropDownItem()
-            item.setIconImage(UIImage(named: dict["image"]))
-            item.setText(dict["title"])
+            item.setIconImage(UIImage(named: dict["image"] as String)!)
+            item.setText(dict["title"] as String)
             dropdownItems.addObject(item)
         }
         
         self.dropDownMenu = IGLDropDownMenu()
-        self.dropDownMenu.menuText = "Choose Weather"
-        self.dropDownMenu.dropDownItems = dropdownItems
-        self.dropDownMenu.paddingLeft = 15
-        self.dropDownMenu.setFrame(CGRectMake(60, 100, 200, 45))
-        self.dropDownMenu.delegate = self
+        self.dropDownMenu!.menuText = "Choose Weather"
+        self.dropDownMenu!.dropDownItems = dropdownItems
+        self.dropDownMenu!.paddingLeft = 15
+        self.dropDownMenu!.setFrame(CGRectMake(60, 100, 200, 45))
+        self.dropDownMenu!.delegate = self
         
         // You can use block instead of delegate if you want
         /*
@@ -64,14 +68,14 @@ class IGLDemoViewController : UIViewController, IGLDropDownMenuDelegate {
         
         self.setUpParamsForDemo1()
         
-        self.dropDownMenu.reloadView()
+        self.dropDownMenu!.reloadView()
         
-        self.view.addSubview(self.dropDownMenu)
+        self.view.addSubview(self.dropDownMenu!)
         
         self.textLabel = UILabel(frame: CGRectMake(0, 50, 320, 50))
-        self.textLabel.textAlignment = .Center
-        self.view.addSubview(self.textLabel)
-        self.textLabel.text = "No Selection."
+        self.textLabel!.textAlignment = .Center
+        self.view.addSubview(self.textLabel!)
+        self.textLabel!.text = "No Selection."
         
     }
     
@@ -79,7 +83,7 @@ class IGLDemoViewController : UIViewController, IGLDropDownMenuDelegate {
     func segmentChanged(segment: UISegmentedControl) {
         
         var index = segment.selectedSegmentIndex
-        self.dropDownMenu.resetParams()
+        self.dropDownMenu!.resetParams()
         switch (index) {
         case 0:
             // Demo 1
@@ -108,50 +112,50 @@ class IGLDemoViewController : UIViewController, IGLDropDownMenuDelegate {
         default:
             break
         }
-        self.dropDownMenu.reloadView()
-        self.textLabel.text = "No Selection."
+        self.dropDownMenu!.reloadView()
+        self.textLabel!.text = "No Selection."
     }
     
     func setUpParamsForDemo1() {
-        self.dropDownMenu.type = .Stack
-        self.dropDownMenu.gutterY = 5
+        self.dropDownMenu!.type = .Stack
+        self.dropDownMenu!.gutterY = 5
     }
     
     func setUpParamsForDemo2() {
-        self.dropDownMenu.type = .Stack
-        self.dropDownMenu.gutterY = 5
-        self.dropDownMenu.itemAnimationDelay = 0.1
-        self.dropDownMenu.rotate = .Random
+        self.dropDownMenu!.type = .Stack
+        self.dropDownMenu!.gutterY = 5
+        self.dropDownMenu!.itemAnimationDelay = 0.1
+        self.dropDownMenu!.rotate = .Random
     }
     
     func setUpParamsForDemo3() {
-        self.dropDownMenu.type = .Stack
-        self.dropDownMenu.gutterY = 5
-        self.dropDownMenu.itemAnimationDelay = 0.04
-        self.dropDownMenu.rotate = .Left
+        self.dropDownMenu!.type = .Stack
+        self.dropDownMenu!.gutterY = 5
+        self.dropDownMenu!.itemAnimationDelay = 0.04
+        self.dropDownMenu!.rotate = .Left
     }
     
     func setUpParamsForDemo4() {
-        self.dropDownMenu.type = .Stack
-        self.dropDownMenu.flipWhenToggleView = true
+        self.dropDownMenu!.type = .Stack
+        self.dropDownMenu!.flipWhenToggleView = true
     }
     
     func setUpParamsForDemo5() {
-        self.dropDownMenu.gutterY = 5
-        self.dropDownMenu.type = .SlidingInBoth
+        self.dropDownMenu!.gutterY = 5
+        self.dropDownMenu!.type = .SlidingInBoth
     }
     
     func setUpParamsForDemo6() {
-        self.dropDownMenu.gutterY = 5
-        self.dropDownMenu.type = .SlidingInBoth
-        self.dropDownMenu.itemAnimationDelay = 0.1
+        self.dropDownMenu!.gutterY = 5
+        self.dropDownMenu!.type = .SlidingInBoth
+        self.dropDownMenu!.itemAnimationDelay = 0.1
     }
     
     // MARK: - IGLDropDownMenuDelegate
     
     func dropDownMenu(dropDownMenu: IGLDropDownMenu, selectedItemAtIndex index: Int) {
-        var item: IGLDropDownItem = dropDownMenu.dropDownItems[index]
-        self.textLabel.text = "Selected: \(item.text)"
+        var item: IGLDropDownItem = dropDownMenu.dropDownItems!.objectAtIndex(index) as IGLDropDownItem
+        self.textLabel!.text = "Selected: \(item.text)"
     }
     
     override func didReceiveMemoryWarning() {

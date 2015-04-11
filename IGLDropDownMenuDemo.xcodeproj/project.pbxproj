@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A12B43519B20C9600CC6235 /* IGLDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A12B43319B20C9600CC6235 /* IGLDropDownMenu.m */; };
 		3A29357C19B20673006BAAA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A29357B19B20673006BAAA7 /* Foundation.framework */; };
 		3A29357E19B20673006BAAA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A29357D19B20673006BAAA7 /* CoreGraphics.framework */; };
 		3A29358019B20673006BAAA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A29357F19B20673006BAAA7 /* UIKit.framework */; };
@@ -36,8 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A12B43219B20C9600CC6235 /* IGLDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDropDownMenu.h; sourceTree = "<group>"; };
-		3A12B43319B20C9600CC6235 /* IGLDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownMenu.m; sourceTree = "<group>"; };
 		3A29357819B20673006BAAA7 /* IGLDropDownMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGLDropDownMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A29357B19B20673006BAAA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A29357D19B20673006BAAA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,8 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				85E09F581AD9CF6B00243DE7 /* IGLDropDownItem.swift */,
-				3A12B43219B20C9600CC6235 /* IGLDropDownMenu.h */,
-				3A12B43319B20C9600CC6235 /* IGLDropDownMenu.m */,
 				85E09F561AD9CF5D00243DE7 /* IGLDropDownMenu.swift */,
 			);
 			path = IGLDropDownMenu;
@@ -264,7 +259,6 @@
 				3A29358819B20673006BAAA7 /* main.m in Sources */,
 				85E09F571AD9CF5D00243DE7 /* IGLDropDownMenu.swift in Sources */,
 				85E09F5B1AD9D45C00243DE7 /* IGLAppDelegate.swift in Sources */,
-				3A12B43519B20C9600CC6235 /* IGLDropDownMenu.m in Sources */,
 				85E09F591AD9CF6B00243DE7 /* IGLDropDownItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +382,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IGLDropDownMenuDemo/IGLDropDownMenuDemo-Prefix.pch";
 				INFOPLIST_FILE = "IGLDropDownMenuDemo/IGLDropDownMenuDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -404,6 +399,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IGLDropDownMenuDemo/IGLDropDownMenuDemo-Prefix.pch";
 				INFOPLIST_FILE = "IGLDropDownMenuDemo/IGLDropDownMenuDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
